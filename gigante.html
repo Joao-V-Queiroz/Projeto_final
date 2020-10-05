@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Seja um Gigante</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="hamburguer">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+          <span>fechar</span>
+        </div>  
+
+        <header id="home">
+            <div class="img-wrapper">
+                <img src="imagens/gigantes.jpg" alt="">
+            </div>
+            <div class="banner">
+                <h1>Seja um Sócio Gigante</h1>
+                <p>Conheça nossos planos e ajude o Vasco a ser maior</p>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+          <nav>
+            <ul class="menu">
+              <li class="menu-item">
+              <a href="index.html" class="menu-link">Home</a></li>   
+              <a href="historia.html" class="menu-link">História</a></li>
+              <li class="menu-item">
+              <a href="estadio.html" class="menu-link">Estádio</a></li>
+              <li class="menu-item">
+              <a href="titulos.html" class="menu-link">Títulos</a></li>
+              <li class="menu-item">
+              <a href="elenco.html" class="menu-link">Ídolos</a></li>
+              <li class="menu-item">
+                <a href="gigante.html" class="menu-link">Sócio</a></li>
+                <li class="menu-item">
+                    <a href="gols.html" class="menu-link">Gols</a></li>
+            </ul>
+          </nav>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github-alt"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </aside>
+    </div>
+    <div class= "text">
+      <h1>Planos Sócio Torcedor</h1>  
+      <br><br><br><br>
+      <div class="grid-container">
+        <div class="grid-item">Plano Júnior Gigante R$20,00</div>
+        <div class="grid-item">Plano Master Gigante R$50,00</div>
+        <div class="grid-item">Plano Sou Louco pelo Gigante R$100,00</div>
+      </div>
+      </div>
+      <div class = "gigante">
+      <form action="exibir-dados" class="formulario"> 
+        <p>Faça seu cadastro em nossos planos</p>
+        
+        <div class="field">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+        </div>
+        <div class="field">
+          <label for="nome">Seu estado:</label>
+          <input type="text" id="estado" name="nome" placeholder="Digite seu estado*" required>
+      </div>
+      <div class="field">
+        <label for="nome">Sua cidade:</label>
+        <input type="text" id="cidade" name="nome" placeholder="Digite sua cidade*" required>
+    </div>
+    <div class="field">
+      <label for="nome">Seu endereço:</label>
+      <input type="text" id="endereco" name="nome" placeholder="Digite seu endereço*" required>
+  </div>
+        <div class="field">
+            <label for="telefone">Seu Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone">
+        </div>
+
+        <div class="field">
+            <label for="email">Seu E-Mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+        </div>     
+        <div class="field">
+          <label for="nome">Seu Cpf:</label>
+          <input type="text" id="cpf" name="nome" placeholder="Digite seu Cpf*" required>
+      </div>   
+      <div class="field">
+        <label for="nome">Digite o número do seu cartão crédito ou débito:</label>
+        <input type="text" id="cartao" name="nome" placeholder="Digite o número do seu cartão crédito ou débito*:" required>
+    </div>  
+        <div class="field radiobox">
+            <span>Deseja receber nossas novidades?</span>
+            <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+            <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
+        </div>
+        <div class="field radiobox">
+          <span>Qual plano você deseja ?</span>
+          <input type="radio" name="novidades" id="junior" value="junior" checked><label for="Júnior">Júnior</label>
+          <input type="radio" name="novidades" id="master" value="master"><label for="nao">Master</label>
+          <input type="radio" name="novidades" id="louco" value="louco"><label for="nao">Louco</label>
+      </div>
+        <div class="field">
+            <label for="mensagem">Sua mensagem:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" required></textarea>
+        </div>
+
+        <input type="submit" name="acao" value="Enviar">
+    </form>
+  </div>
+   </body>
+   <script src="script.js"></script>
+
+
+</html>
+

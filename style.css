@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Muli:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --font-primary: "Baloo Da 2", serif;
+  --font-secundary: "Josefin Slab", serif;
+  --font-action: "Muli", serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.hamburguer {
+  /* background-color: red; */
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 100;
+  right: 2rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.opcao{
+color: white; 
+}
+
+.show-menu .hamburguer {
+  right: 16rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.1rem 1px #000;
+  transition: transform 1s;
+}
+
+.show-menu #line1 {
+  transform: rotate(45deg) translate(0.3rem, 0.45rem);
+}
+.show-menu #line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+.show-menu #line3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.45rem);
+}
+
+.hamburguer span {
+  position: absolute;
+  left: 3rem;
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a044ff;
+  color: #ffffff;
+  font-family: var(--font-action);
+  opacity: 0;
+}
+
+.hamburguer span::before {
+  content: "";
+  position: absolute;
+  border-right: 0.5rem solid #a044ff;
+  border-top: 0.5rem solid transparent;
+  border-left: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+  opacity: 1;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  animation: zoom 25s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.loja_banner {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.loja_banner p {
+  font-family: var(--font-secundary);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.7s forwards;
+}
+.loja_banner h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-family: var(--font-primary);
+  font-weight: 200;
+  text-shadow: 0.3rem 0.4rem 2px rgba(0, 0, 0, 0.4);
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.5s forwards;
+}
+.loja_banner button {
+  font-family: var(--font-action);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: #6a3093;
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+  background: linear-gradient(to left, #a044ff, #6a3093);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+}
+.text{
+padding: 3.2rem;
+text-align: justify;
+}
+.gigante{
+  width: 100%;
+  max-width: 74rem;
+  border-radius: .8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 0.5rem;  
+}
+.text h1{
+text-align: center;
+
+}
+
+.banner h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-family: var(--font-primary);
+  font-weight: 200;
+  text-shadow: 0.3rem 0.4rem 2px rgba(0, 0, 0, 0.4);
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.5s forwards;
+}
+img.vascao{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+
+}
+.banner p {
+  font-family: var(--font-secundary);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button {
+  font-family: var(--font-action);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: #6a3093;
+  background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+  background: linear-gradient(to left, #a044ff, #6a3093);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+}
+
+@keyframes moveBanner {
+  0% {
+    transform: translateY(10rem) rotateY(-30deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+.sidebar {
+  width: 20rem;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -20rem;
+  transition: all 1s;
+  z-index: 80;
+}
+
+.show-menu .sidebar {
+  right: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.menu-link {
+  font-family: var(--font-action);
+  font-size: 2rem;
+  color: #555;
+  transition: color 1s;
+}
+
+.menu-link:hover {
+  color: #6a3093;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media i {
+  background-color: #6a3093;
+  color: rgba(255, 255, 255, 1);
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 1s;
+}
+
+.social-media i:hover {
+  background-color: #a044ff;
+}
+
+.sessao-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sessao-header h1 {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: #4b4b4b;
+  border-bottom: solid 3px #6a3093;
+  margin-bottom: 1.5rem;
+}
+
+.social-list a{
+  margin: 0 2rem;
+  color: #a7a7a7;
+  font-size: 1.3rem;
+}
+
+.social-list ul {
+  display: flex;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  max-width: 74rem;
+  border-radius: .8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 6.4rem;
+  background-color: black ;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.column {
+	flex-direction: column;
+}
+/* Flex Item */
+.item {
+  /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+  flex: 1;
+  margin: 5px;
+  background: white;
+  text-align: center;
+  font-size: 1.5em;
+}
+​
+h1 {
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 1.25em;
+  font-weight: normal;
+}
+​
+body {
+  font-family: monospace;
+  color: #333;
+  
+}
+.formulario{
+  width: 300px;
+  padding: 30px;
+  border:1px solid #ccc;
+ 
+}
+.formulario p{
+  width: 100%;
+  font-size: 1.5em;
+  
+}
+.field{
+  width: 100%;
+  margin: 15px 0;
+  
+}
+.field label, 
+.field span{
+  padding-left: 10px;
+  font-size: 1.1em;
+  display: block;
+  width: 100%;
+}
+.radiobox label{
+  width: auto;
+  display: inline-block;
+}
+input[type=text],
+input[type=email],
+textarea{
+  width: 100%;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+input#nao{
+  margin-left: 30px;
+}
+textarea{
+  line-height: 20px;
+  padding: 10px;
+  height: 90px;
+  resize: none;
+}
+input[type=submit]{
+  display: block;
+  background-color: #ccc;
+  height: 35px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#alice{
+color: #431236;
+width: 25%;
+position: absolute;
+top: 50%; left: 50%;
+transform-origin: 0 0;
+transform: rotate(0) translate3D(-50%, -50%, 0);
+backface-visibility: hidden;
+will-change: transform, color;
+}
+
+path {
+fill: currentColor;
+}
+
+/* This stuff might be interesting. */
+#tunnel {
+background: 
+  url("http://rachelnabors.com/alice-in-videoland/book/img/bg-tunnel-border-left.svg") repeat-y,
+  url("http://rachelnabors.com/alice-in-videoland/book/img/bg-tunnel-border-right.svg") repeat-y 100% 100%,
+  url("http://rachelnabors.com/alice-in-videoland/book/img/bg_tunnel-specks.png"),
+  #6c373f;
+margin: 0 auto;
+height: calc(100% + 300px);
+width: 60%;
+min-width: 400px;
+backface-visibility: hidden;
+will-change: transform;
+}
+
+.wrapper {
+position: relative;
+width: 100%; height: 100%;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .loja_banner, .loja_banner p, .loja_banner h1, 
+  .loja_banner button{
+    width: 90%;
+    height: 50px;
+    display: block;
+  }
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 65%;
+}
+.embed-container h1{
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 1.25em;
+  font-weight: normal;
+
+}
+@media only screen and (max-device-width: 700px){
+  .embed-container{
+    position: relative;
+    padding-bottom: 56%;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 30px;
+    margin-bottom: auto; 
+    }
+  
+}
+
+html, body { height: 100%}
